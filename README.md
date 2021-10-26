@@ -1,6 +1,18 @@
-# AngularPoc12
+# hibryd-angularjs-angular12
+
+This project is a hybrid implementation from AngularJS and Angular, versio 12, based on Phonecat AngularJS sample project.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+
+## Steps to migration
+
+1. Intall latest version of angular-cli anf node (using: 12.2.11, and 14.18.1, respectively);
+2. Generate a new angular project with command: ng new my-app
+3. Move contents (/app, /assets, /environments, main.ts, polyfills.ts, styles.scss, test.ts) from /src folder to a new folder /src/ng2, to separate the source code from Angular and AngularJS apps; We do not move the index.html and favicon.ico, becouse they willbe shared for both apps;
+4. Update all path references in file angular.json to new new folder /src/ng2;
+5. Create a new folder src/ng1, and copy the entire code and lib dependencies from the AngularJS app.
+6. Update de index.html to include CSS and Javascript imports required to the AngularJS app;
+
 
 ## Development server
 
